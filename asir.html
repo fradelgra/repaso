@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Extraordinaria</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body class="fondo">
+
+  <main>
+    <hr>
+    <center><h1 class="titulo"><a href="https://portal.edu.gva.es/ieselgrao/?page_id=690&lang=es" target="_blank">IES El Grao</a></h1></center>
+  </main>
+  <hr class="hr1">
+
+  <label>Nombre: <input type="text" id="nombre"></label><br><br>
+  <label>Apellido: <input type="text" id="apellido"></label><br><br>
+  <label>Año de nacimiento: <input type="number" id="nacimiento"></label><br><br>
+  <button type="submit">Enviar</button>
+  <button type="reset">Borrar</button>
+
+  <script>
+    const nombre = document.getElementById('nombre');
+    const apellido = document.getElementById('apellido');
+
+    function mostrarMensaje() {
+        if (nombre.value.trim() !== '' && apellido.value.trim() !== ''){
+            alert(`Bienvenido ${nombre.value} ${apellido.value} te vas a matricular de ASIR`);
+        }
+    }
+
+    nombre.addEventListener('blur', mostrarMensaje);
+    apellido.addEventListener('blur', mostrarMensaje);
+  </script>
+
+  <footer>
+    <div class="div4">
+      <p class="texto1"><b>Web desarollada por <a class="nombre">Francis</a></b></p><hr class="hr2"><hr class="hr3">
+    </div>
+  </footer>
+
+</body>
+</html>
